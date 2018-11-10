@@ -82,3 +82,12 @@ Graph.prototype.forEachNode = function(cb) {
  */
 
 
+// Graph.prototype.addNode -----> O(1)
+// Graph.prototype.contains -----> O(n)
+// raph.prototype.removeNode -----> O(n)
+// Graph.prototype.hasEdge -----> ) O(n)
+// Graph.prototype.addEdge -----> O(1)
+// Graph.prototype.removeEdge -----> O(n)
+// Graph.prototype.forEachNode -----> O(n)
+
+
