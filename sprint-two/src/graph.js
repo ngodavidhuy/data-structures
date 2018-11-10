@@ -20,8 +20,8 @@ Graph.prototype.contains = function(node) {
 Graph.prototype.removeNode = function(node) {
 
   //Remove from vertices
-  this.vertices = this.vertices.filter( x => {
-    x !== node;
+  this.vertices = this.vertices.filter( v => {
+    v !== node;
   });
 
   //Remove the edges
@@ -56,11 +56,9 @@ Graph.prototype.addEdge = function(fromNode, toNode) {
 
 // Remove an edge between any two specified (by value) nodes.
 Graph.prototype.removeEdge = function(fromNode, toNode) {
-  let target = JSON.stringify([fromNode, toNode]);
-  console.log('target: ' + target);
-  let target2 = JSON.stringify([toNode, fromNode]);
-  console.log('target2: ' + target2);
   let updateEdges = [];
+  let target = JSON.stringify([fromNode, toNode]);
+  let target2 = JSON.stringify([toNode, fromNode]);
   for (let i = 0; i < this.edges.length; i++) {
     let edge = JSON.stringify(this.edges[i]);
     if (target !== edge && target2 !== edge) {
