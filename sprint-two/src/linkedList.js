@@ -22,21 +22,20 @@ var LinkedList = function() {
   };
 
   list.removeHead = function() {
-    let removedVal = this.head.value;
+    let val = this.head.value;
     this.head = this.head.next;
-    return removedVal;
+    return val;
   };
 
   list.contains = function(target) {
-    let currentNode = this.head;
-
-    while (currentNode) {
-      if (currentNode.value === target) {
+    let node = this.head;
+    while (node) {
+      if (node.value === target) {
         return true;
       }
-      currentNode = currentNode.next;
+      node = node.next;
     }
-    
+
     return false;
   };
 
@@ -46,10 +45,8 @@ var LinkedList = function() {
 
 var Node = function(value) {
   var node = {};
-
   node.value = value;
   node.next = null;
-
   return node;
 };
 
