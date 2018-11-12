@@ -33,7 +33,7 @@ describe('graph', function() {
     graph.addNode(3);
     graph.addEdge(3, 2);
     expect(graph.hasEdge(3, 2)).to.equal(true);
-    expect(graph.hasEdge(4, 2)).to.equal(false);
+    expect(graph.hasEdge(3, 1)).to.equal(false);
   });
 
   it('should remove edges between nodes', function() {
